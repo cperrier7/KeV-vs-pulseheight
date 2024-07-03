@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+def edgevolts(bias_voltage):
+# Calculate and print the 50 KeV channel value at the given bias voltage
+    print("50 KeV channel at " + str(bias_voltage) + " volts: " + str((0.04329 * bias_voltage - 1.129)*(8192/10)))
+#Calculate and print the 50, 125, 325, and 800 KeV pulse heights at the given bias voltage
+    print("50 KeV pulse height at " + str(bias_voltage) + " volts: " + str(0.04329 * bias_voltage - 1.129))
+    print("125 KeV pulse height at " + str(bias_voltage) + " volts: " + str(.09714*(bias_voltage)-4.008))
+    print("325 KeV pulse height at " + str(bias_voltage) + " volts: " + str(.2403*(bias_voltage)-11.66))
+    print("800 KeV pulse height at " + str(bias_voltage) + " volts: " + str(.5809*(bias_voltage)-29.87))
+
+edgevolts(54.5)
